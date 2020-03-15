@@ -4,7 +4,7 @@
     <h2>Navbar Component</h2>
     <Navbar />
     <h1>All friends</h1>
-    <AllFriends :friends='friends' />
+    <AllFriends :friends='friends' @delete='deleteFriend' />
     <h1>Online friends</h1>
     <OnlineFriends :friends='friends' />
   </div>
@@ -31,6 +31,12 @@ export default {
         {name: 'milad', online: true},
         {name: 'Feyzi', online: false}
       ]
+    }
+  },
+
+  methods: {
+    deleteFriend(payload){
+      this.friends = this.friends.filter(friend => friend.name !== payload.name)
     }
   }
 }
