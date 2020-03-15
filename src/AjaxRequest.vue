@@ -5,7 +5,7 @@
             <li v-for='post in posts' :key="post.id">
                 {{post.id}}. <br/>
                 <h3>{{post.title}}</h3>
-                <p>{{post.body}}</p>
+                <p>{{post.body | snippet}}</p>
             </li>
         </ul>
     </div>
