@@ -8,6 +8,7 @@
     <h1>Online friends</h1>
     <OnlineFriends :friends='friends' />
     <Blogs />
+    <AjaxRequest />
   </div>
 </template>
 
@@ -16,6 +17,7 @@ import Navbar from './Navbar';
 import AllFriends from './AllFriends';
 import OnlineFriends from './OnlineFriends';
 import Blogs from './Blogs';
+import AjaxRequest from './AjaxRequest'
 
 export default {
   name: 'app',
@@ -23,7 +25,8 @@ export default {
     Navbar,
     AllFriends,
     OnlineFriends,
-    Blogs
+    Blogs,
+    AjaxRequest
   },
   data () {
     return {
